@@ -14,17 +14,17 @@ import ServiceNowChat from "https://bccrdev.service-now.com/uxasset/externals/no
 		portal: 'scp',
 		live_agent_queue: 'e25db237c301565004c8322c0501315d',
 		default_topic: 'b6512af8c3599a90df41e7deb00131ac',
-		language: 'es',
+		language: 'esp',
 	},
-/* 	branding: {
-		// bgColor: '#008cff',
+	branding: {
+		bgColor: '#003764',
 		// primaryColor: '#ffefd5',
-		// hoverColor: '#1b6e97',
-		// activeColor: '#AAA',
-		// openIcon: 'custom-open.svg',
-		// closeIcon: 'custom-close.svg',
+		hoverColor: '#003764',
+		activeColor: '#003764',
+		openIcon: 'chat_icon_bccr.png',
+		closeIcon: 'logo_asistente_virtual_bccr.png',
 		// sizeMultiplier: 1.6
-	}, */
+	}, 
 	offsetX: 25,
 	offsetY: 15,
 	position: 'right',
