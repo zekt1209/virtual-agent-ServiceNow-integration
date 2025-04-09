@@ -1,0 +1,15 @@
+########## - Click al boton y muestre alerta
+########## - Que el boton solo aplique para (Sfari y Mobile)
+
+########## - Revisar error 401 que se cicla (Revisar si afecta funcionamiento y si podemos prevenirlo).
+- Crear texto para KA que incluiremos en el Alert
+
+
+
+- Respaldar codigo y limpiar comentarios en codigo (Trabajo en conjunto)
+
+
+
+Proximos pasos
+- Revisar con Gabriel la manera de mandar variables de ambiente a utilizar para los diferentes ENV
+- Variable ENV para link de articulo de conocimiento
