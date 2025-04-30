@@ -60,6 +60,35 @@ function getDeviceType() {
 	}
 }
 
+(function detectThirdPartyCookies(callback) {
+	const iframe = document.createElement("iframe");
+	iframe.style.display = "none";
+	iframe.sandbox = "allow-scripts allow-same-origin";
+	iframe.srcdoc = `
+	  <script>
+		document.cookie = 'test=1; SameSite=None; Secure';
+		parent.postMessage(document.cookie.indexOf('test=') !== -1 ? 'enabled' : 'blocked', '*');
+	  <\/script>
+	`;
+	document.body.appendChild(iframe);
+  
+	window.addEventListener("message", function handler(event) {
+	  if (event.source !== iframe.contentWindow) return;
+	  window.removeEventListener("message", handler);
+	  document.body.removeChild(iframe);
+  
+	  if (typeof callback === "function") {
+		callback(event.data === 'enabled');
+	  }
+	});
+  })(function (enabled) {
+	if (!enabled) {
+	  alert("Las cookies de terceros están bloqueadas en tu navegador. Esto puede afectar el funcionamiento del chatbot.");
+	} else {
+	  console.log("Third-party cookies are ENABLED ✅");
+	}
+  });
+
 // VA Bubble button element
 const chatBtn = document.querySelector("now-requestor-chat-popover");
 
