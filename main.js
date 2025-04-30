@@ -1,6 +1,6 @@
-import ServiceNowChat from "https://bccrtest.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false"; 
+import ServiceNowChat from "https://bccrdev.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false"; 
 
-var instanceServiceNow = 'https://bccrtest.service-now.com';
+var instanceServiceNow = 'https://bccrdev.service-now.com';
 
 const chat = new ServiceNowChat({
 	instance: instanceServiceNow,
