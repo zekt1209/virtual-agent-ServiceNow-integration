@@ -1,11 +1,9 @@
-import ServiceNowChat from "https://bccrdev.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false"; 
+import ServiceNowChat from "https://bccrtest.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false"; 
+
+var instanceServiceNow = 'https://bccrtest.service-now.com';
 
 const chat = new ServiceNowChat({
-	instance: 'https://bccrdev.service-now.com',
-	// headers: {
-	// 	'Content-Type': 'application/json',
-	// 	'Authorization': 'Basic xxxxxxxxx',
-	// },
+	instance: instanceServiceNow,
 	context: {
 		// skip_load_history: 1,
 		branding_key: "scp_bccr_branding",
@@ -14,9 +12,7 @@ const chat = new ServiceNowChat({
 		portal: 'scp',
 		live_agent_queue: 'e25db237c301565004c8322c0501315d',
 		default_topic: 'b6512af8c3599a90df41e7deb00131ac',
-		// lang: 'es',
 		lang: 'esp',
-		// language: 'esp',
 	},
 	branding: {
 		bgColor: '#003764',
@@ -131,13 +127,13 @@ chatBtn.addEventListener('click', () => {
 				// Add click handler
 				warningContainer.addEventListener('click', () => {
 					const message = 
-					'Se encontró una incompatibilidad con tu dispositivo.\n\n ¿Deseás ir al artículo de conocimiento para revisar el procedimiento?\n\n Si ya efectuaste el proceso, podés omitir este mensaje. O bien si está en un dispositivo MacOS, puede utilizar Google Chrome';
+					'Se encontró una incompatibilidad con su dispositivo.\n\n¿Desea ir al artículo de conocimiento para revisar el procedimiento?\n\nSi ya efectuó el proceso, puede omitir este mensaje. O bien si está en un dispositivo MacOS, puede utilizar el navegador Google Chrome';
 	
 					const shouldOpen = confirm(message);
 	
 					if (shouldOpen) {
 						window.open(
-							'https://bccrdev.service-now.com/scp?id=kb_article_view&sys_kb_id=58fbabe693af8a948d2ab84efaba10dd',
+							instanceServiceNow + '/scp?id=kb_article_view&sys_kb_id=58fbabe693af8a948d2ab84efaba10dd',
 							'_blank');
 					}
 				});
