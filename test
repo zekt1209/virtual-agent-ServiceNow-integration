@@ -1,0 +1,20 @@
+body > div:nth-child(3) > now-requestor-chat-popover
+
+// Element
+<now-requestor-chat-popover instance="https://bccrdev.service-now.com" client-context="%7B%22branding_key%22%3A%22scp_bccr_branding%22%2C%22skip_load_history%22%3Afalse%2C%22load_active_only%22%3Atrue%2C%22portal%22%3A%22scp%22%2C%22live_agent_queue%22%3A%22e25db237c301565004c8322c0501315d%22%2C%22default_topic%22%3A%22b6512af8c3599a90df41e7deb00131ac%22%2C%22lang%22%3A%22esp%22%7D" custom-close-icon="logo_asistente_virtual_bccr.png" offset-x="25" offset-y="15" is-internal-url="false" position="right" false="" now-id="i72jnz20nj4d-2" component-id="i72jnz20nj4d-2"></now-requestor-chat-popover>
+
+// Outer html
+<now-requestor-chat-popover instance="https://bccrdev.service-now.com" client-context="%7B%22branding_key%22%3A%22scp_bccr_branding%22%2C%22skip_load_history%22%3Afalse%2C%22load_active_only%22%3Atrue%2C%22portal%22%3A%22scp%22%2C%22live_agent_queue%22%3A%22e25db237c301565004c8322c0501315d%22%2C%22default_topic%22%3A%22b6512af8c3599a90df41e7deb00131ac%22%2C%22lang%22%3A%22esp%22%7D" custom-close-icon="logo_asistente_virtual_bccr.png" offset-x="25" offset-y="15" is-internal-url="false" position="right" false="" now-id="i72jnz20nj4d-2" component-id="i72jnz20nj4d-2"></now-requestor-chat-popover>
+
+// JS Path
+document.querySelector("body > div:nth-child(3) > now-requestor-chat-popover")
+
+// Chat object
+{
+    "style": {},
+    "el": {},
+    "host": {
+        "__DO_NOT_USE_BOOTSTRAPPED__": true,
+        "__DO_NOT_USE_OR_YOU_WILL_BE_FIRED_BY_YOUR_PARENT__": null
+    }
+}
